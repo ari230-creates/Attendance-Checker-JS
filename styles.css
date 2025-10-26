@@ -1,100 +1,66 @@
+/* Global Styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+    font-family: 'Inter', sans-serif;
+    background-color: #e9eef2;
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding: 20px;
+    align-items: flex-start; /* Align to the top of the viewport */
+    padding: 30px;
     margin: 0;
+    min-height: 100vh;
 }
 
 .container {
     background-color: white;
     padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    max-width: 650px;
     width: 100%;
 }
-<div class ="management-section">
-    <h2>Manage Students</h2>
-    <input type="text" id="new-student-name" placeholder="Enter new student name">
-    <button id="add-student-button">Add Student</button>
-    <select id="student-to-remove">
-        </select>
-    <button id="remove-student-button">Remove Selected</button>
-</div>
 
-<hr> ```
-
-### $\rightarrow$ Changes to `styles.css`
-
-Add this CSS to make the management section look clean:
-
-```css
-/* New CSS for Management Section */
-.management-section {
-    padding: 15px;
-    margin-bottom: 20px;
-    border: 1px dashed #ccc;
-    border-radius: 5px;
+hr {
+    border: 0;
+    height: 1px;
+    background: #ccc;
+    margin: 25px 0;
 }
 
-.management-section h2 {
-    margin-top: 0;
-    color: #007bff;
-    font-size: 1.4em;
-}
-
-#new-student-name, #student-to-remove {
-    padding: 8px;
-    margin-right: 10px;
-    width: 150px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-}
-
-#add-student-button, #remove-student-button {
-    padding: 8px 15px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-#add-student-button {
-    background-color: #ffc107; /* Yellow/Orange */
-    color: #333;
-}
-
-#remove-student-button {
-    background-color: #dc3545; /* Red */
-    color: white;
-}
 h1 {
     text-align: center;
-    color: #333;
-    border-bottom: 2px solid #007bff;
-    padding-bottom: 10px;
+    color: #1a73e8; /* Blue accent */
+    margin-top: 0;
 }
 
+.date-display {
+    text-align: center;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* --- Table Styles --- */
 table {
     width: 100%;
     border-collapse: collapse;
     margin: 20px 0;
+    border-radius: 8px;
+    overflow: hidden; /* Ensures rounded corners on table */
 }
 
 th, td {
-    padding: 12px;
-    border: 1px solid #ddd;
+    padding: 14px;
+    border: 1px solid #e0e0e0;
     text-align: left;
 }
 
 th {
-    background-color: #007bff;
+    background-color: #1a73e8;
     color: white;
+    font-weight: 600;
 }
 
+/* --- Button & Status Styles --- */
 .status-button {
     padding: 8px 12px;
     border: none;
@@ -102,25 +68,131 @@ th {
     cursor: pointer;
     transition: background-color 0.2s;
     width: 100px;
+    font-weight: 500;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.present { background-color: #28a745; color: white; }
-.absent { background-color: #dc3545; color: white; }
+.present { 
+    background-color: #4CAF50; /* Green */
+    color: white; 
+}
+.absent { 
+    background-color: #F44336; /* Red */
+    color: white; 
+}
 
-#save-button {
+.action-button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.2s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.action-button.save {
     display: block;
     width: 100%;
-    padding: 15px;
-    background-color: #28a745;
+    background-color: #008744; /* Darker Green */
     color: white;
-    font-size: 1.1em;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
     margin-top: 20px;
-    transition: background-color 0.2s;
 }
 
-#save-button:hover {
-    background-color: #218838;
+.action-button.save:hover {
+    background-color: #007037;
+}
+
+.status-message {
+    text-align: center;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+/* --- Student Management Styles --- */
+.management-section {
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f7f7f7;
+}
+
+.management-section h2 {
+    margin-top: 0;
+    color: #1a73e8;
+    font-size: 1.3em;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+#new-student-name, #student-to-remove {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.action-button.add {
+    background-color: #ffe082; /* Light Yellow */
+    color: #333;
+}
+
+.action-button.remove {
+    background-color: #ef9a9a; /* Light Red */
+    color: #333;
+}
+
+/* --- History Section Styles --- */
+.history-section h2 {
+    color: #1a73e8;
+    font-size: 1.3em;
+    margin-bottom: 15px;
+}
+
+/* History Table Specifics */
+#history-container table {
+    margin-top: 10px;
+}
+
+#history-container table th, 
+#history-container table td {
+    padding: 8px;
+    text-align: center;
+    font-size: 0.85em;
+    width: auto; /* Allow columns to shrink */
+}
+
+/* Status colors for history view */
+.history-present {
+    background-color: #e6ffe6; /* Very light green */
+    color: #006000;
+    font-weight: bold;
+}
+
+.history-absent {
+    background-color: #ffe6e6; /* Very light red */
+    color: #a00000;
+    font-weight: bold;
+}
+
+/* Responsive adjustment for small screens */
+@media (max-width: 650px) {
+    body {
+        padding: 10px;
+        align-items: flex-start;
+    }
+    .input-group {
+        flex-direction: column;
+        gap: 5px;
+    }
+    #new-student-name, #student-to-remove, .action-button {
+        width: 100%;
+        margin-right: 0;
+    }
 }
