@@ -51,6 +51,11 @@ View History: Check the Attendance History section at the bottom to see a summar
 
 Since this is a static site (no backend server required), running it is very simple:
 
+
+
 🚀 Live Demo
 
-View Demo Here :  
+View Demo Here :  https://ari230-creates.github.io/Attendance-Checker-JS/
+
+
+
