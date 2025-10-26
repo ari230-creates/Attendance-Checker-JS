@@ -51,8 +51,6 @@ View History: Check the Attendance History section at the bottom to see a summar
 
 Since this is a static site (no backend server required), running it is very simple:
 
-Clone the Repository: Download or clone the project folder to your local machine.
+🚀 Live Demo
 
-Open index.html: Locate the index.html file in the project folder.
-
-Launch: Double-click the index.html file. It will automatically open in your default web browser, and the application will be ready to use.
+View Demo Here :  
