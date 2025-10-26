@@ -30,11 +30,8 @@ Application logic, status toggling, and data management.Browser Local Storage: U
 📝 Usage
  
 Manage Students: Use the top section to add or remove names from the list.
-
 Mark Attendance: On the main table, click the button next to each student's name to toggle their status between Present (Green) and Absent (Red).
-
 Save: Click the Save Today's Attendance button to permanently record the day's attendance.
-
 View History: Check the Attendance History section at the bottom to see a summary of all saved days.
 
 
