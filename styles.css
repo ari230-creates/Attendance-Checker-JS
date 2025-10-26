@@ -16,7 +16,61 @@ body {
     max-width: 600px;
     width: 100%;
 }
+<div class ="management-section">
+    <h2>Manage Students</h2>
+    <input type="text" id="new-student-name" placeholder="Enter new student name">
+    <button id="add-student-button">Add Student</button>
+    <select id="student-to-remove">
+        </select>
+    <button id="remove-student-button">Remove Selected</button>
+</div>
 
+<hr> ```
+
+### $\rightarrow$ Changes to `styles.css`
+
+Add this CSS to make the management section look clean:
+
+```css
+/* New CSS for Management Section */
+.management-section {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px dashed #ccc;
+    border-radius: 5px;
+}
+
+.management-section h2 {
+    margin-top: 0;
+    color: #007bff;
+    font-size: 1.4em;
+}
+
+#new-student-name, #student-to-remove {
+    padding: 8px;
+    margin-right: 10px;
+    width: 150px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+#add-student-button, #remove-student-button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#add-student-button {
+    background-color: #ffc107; /* Yellow/Orange */
+    color: #333;
+}
+
+#remove-student-button {
+    background-color: #dc3545; /* Red */
+    color: white;
+}
 h1 {
     text-align: center;
     color: #333;
