@@ -20,3 +20,42 @@ This application includes the following core functionalities:Student Management:
 Structure and content.CSS3: Styling and responsive layout.JavaScript (ES6+): 
 
 Application logic, status toggling, and data management.Browser Local Storage: Used for saving the student list and daily records.
+
+
+
+
+
+
+
+📝 Usage
+ 
+Manage Students: Use the top section to add or remove names from the list.
+
+Mark Attendance: On the main table, click the button next to each student's name to toggle their status between Present (Green) and Absent (Red).
+
+Save: Click the Save Today's Attendance button to permanently record the day's attendance.
+
+View History: Check the Attendance History section at the bottom to see a summary of all saved days.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+🚀 How to Run Locally
+
+Since this is a static site (no backend server required), running it is very simple:
+
+Clone the Repository: Download or clone the project folder to your local machine.
+
+Open index.html: Locate the index.html file in the project folder.
+
+Launch: Double-click the index.html file. It will automatically open in your default web browser, and the application will be ready to use.
